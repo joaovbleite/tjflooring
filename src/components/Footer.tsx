@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Column 1: Company Info */}
           <div className="space-y-2">
             {/* Logo Section - No container, minimal spacing */}
-            <img src="https://placehold.co/300x100/blue/white?text=TJ+Flooring" alt="TJ Flooring Logo" className="h-32 w-auto -ml-3 -mt-3 mb-1" /> 
+            <img src="https://i.postimg.cc/DwvCR96g/Screenshot-2025-06-06-at-17-42-37-removebg-preview.png" alt="TJ Flooring Logo" className="h-32 w-auto -ml-3 -mt-3 mb-1" /> 
             <p className="text-blue-100 text-sm leading-relaxed mt-0">
               TJ Flooring is your trusted partner for all residential and commercial construction and remodeling services, 
               delivering exceptional quality and craftsmanship for over 15 years.

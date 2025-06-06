@@ -1529,9 +1529,9 @@ function App() {
             <div className="flex items-center justify-between h-20">
               <a href="/" className="flex items-center space-x-3 mt-2">
                 <img 
-                  src="https://placehold.co/300x100/blue/white?text=TJ+Flooring" 
+                  src="https://i.postimg.cc/DwvCR96g/Screenshot-2025-06-06-at-17-42-37-removebg-preview.png" 
                   alt="TJ Flooring Logo" 
-                  className="h-24 sm:h-28 md:h-32 w-auto"
+                  className="h-16 sm:h-20 md:h-24 w-auto"
                 />
               </a>
               <div className="hidden lg:flex items-center space-x-6">
@@ -1826,7 +1826,7 @@ function App() {
             {/* Arxen Logo */}
             <div className="mb-6 animate-pulse transition-all">
               <img 
-                src="https://placehold.co/300x100/blue/white?text=TJ+Flooring" 
+                src="https://i.postimg.cc/DwvCR96g/Screenshot-2025-06-06-at-17-42-37-removebg-preview.png" 
                 alt="TJ Flooring Logo" 
                 className="h-40 w-auto"
               />
