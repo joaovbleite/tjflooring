@@ -1,0 +1,131 @@
+{
+  "rewrites": [
+    { "source": "/(.*)\\.(.+)", "destination": "/$1.$2" },
+    { "source": "/services", "destination": "/residential" },
+    { "source": "/kitchens", "destination": "/services/kitchen-remodeling" },
+    { "source": "/bathrooms", "destination": "/services/bathroom-remodeling" },
+    { "source": "/flooring", "destination": "/services/flooring" },
+    { "source": "/hardwood", "destination": "/services/hardwood" },
+    { "source": "/cabinetry", "destination": "/services/custom-cabinetry" },
+    { "source": "/kitchen", "destination": "/services/kitchen-remodeling" },
+    { "source": "/bathroom", "destination": "/services/bathroom-remodeling" },
+    { "source": "/projects", "destination": "/portfolio" },
+    { "source": "/our-work", "destination": "/portfolio" },
+    { "source": "/projects/:projectId", "destination": "/portfolio/:projectId" },
+    { "source": "/free-consultation", "destination": "/free-estimate" },
+    { "source": "/quote", "destination": "/free-estimate" },
+    { "source": "/estimate", "destination": "/free-estimate" },
+    { "source": "/get-estimate", "destination": "/free-estimate" },
+    { "source": "/consultation", "destination": "/free-estimate" },
+    { "source": "/contact-us", "destination": "/contact" },
+    { "source": "/commercial-services", "destination": "/commercial" },
+    { "source": "/business-services", "destination": "/commercial" },
+    { "source": "/commercial-estimate", "destination": "/commercial-quote" },
+    { "source": "/home-services", "destination": "/residential" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install --legacy-peer-deps --force && npm install react@19.1.0 react-dom@19.1.0 --save --force",
+  "framework": "vite",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).css",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/service-worker.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).ico",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).jpg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

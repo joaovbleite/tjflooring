@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/SNx9NN2x/Chat-GPT-Image-May-13-2025-12-34-23-PM-removebg-preview.png" />
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Arxen Construction" />
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/SNx9NN2x/Chat-GPT-Image-May-13-2025-12-34-23-PM-removebg-preview.png" />
+
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob:; frame-src *; style-src * 'unsafe-inline'; font-src * data:;">
+    
+    <!-- Advanced Performance Optimizations -->
+    <!-- Preload critical resources -->
+    <link rel="preload" as="script" href="/src/main.tsx" type="module" />
+    <link rel="modulepreload" href="/src/App.tsx" />
+    
+    <!-- Font preloading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://i.postimg.cc" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Prefetch key navigation destinations to make them load instantly when clicked -->
+    <link rel="prefetch" href="/about" as="document" />
+    <link rel="prefetch" href="/free-estimate" as="document" /> 
+    <link rel="prefetch" href="/contact" as="document" />
+    
+    <!-- Preload critical images -->
+    <link rel="preload" fetchpriority="high" as="image" href="https://i.postimg.cc/SNx9NN2x/Chat-GPT-Image-May-13-2025-12-34-23-PM-removebg-preview.png" />
+    <link rel="preload" fetchpriority="high" as="image" href="https://images.unsplash.com/photo-1543286386-71314a40aac6?auto=format&fit=crop&q=80" />
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://i.postimg.cc" crossorigin />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/src/animations.css" as="style" />
+    <link rel="preload" href="/src/index.css" as="style" />
+    
+    <!-- Font optimization -->
+    <link rel="preload" as="font" href="/fonts/inter-var.woff2" type="font/woff2" crossorigin />
+    
+    <!-- Critical CSS for initial loading - prevents FOUC -->
+    <style>
+      /* Initial loading spinner and critical CSS */
+      #root-loading-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease-out;
+      }
+      @keyframes rotate {
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes loadingBar {
+        0% { width: 0%; }
+        20% { width: 20%; }
+        25% { width: 25%; }
+        43% { width: 43%; }
+        56% { width: 56%; }
+        59% { width: 59%; }
+        76% { width: 76%; }
+        88% { width: 88%; }
+        100% { width: 100%; }
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(59, 130, 246, 0.2);
+        border-top-color: rgba(59, 130, 246, 1);
+        border-radius: 50%;
+        animation: rotate 1s linear infinite;
+      }
+      .loading-progress {
+        width: 200px;
+        height: 4px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: 16px;
+        position: relative;
+      }
+      .loading-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: rgb(59, 130, 246);
+        border-radius: 4px;
+        animation: loadingBar 2s ease-in-out forwards;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+
+    <!-- Primary Meta Tags -->
+    <title>Arxen Construction | Residential &amp; Commercial Remodeling in Marietta, GA</title>
+    <meta name="title" content="Arxen Construction | Residential &amp; Commercial Remodeling in Marietta, GA" />
+    <meta name="description" content="Arxen Construction provides expert residential and commercial remodeling, flooring, painting, and construction services within 90 miles of Marietta, Georgia. Get your free estimate today!" />
+    <meta name="keywords" content="home remodeling, kitchen renovation, bathroom remodeling, flooring installation, commercial construction, Atlanta contractor, Marietta construction company, painting services, custom cabinetry, home renovation Atlanta" />
+    <meta name="author" content="Arxen Construction" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arxenconstruction.com/" />
+    <meta property="og:title" content="Arxen Construction | Residential &amp; Commercial Remodeling in Marietta, GA" />
+    <meta property="og:description" content="Expert remodeling, flooring, painting, and construction services across Metro Atlanta and North Georgia. Request a free estimate!" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1543286386-71314a40aac6?auto=format&fit=crop&q=80" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://arxenconstruction.com/" />
+    <meta property="twitter:title" content="Arxen Construction | Residential &amp; Commercial Remodeling in Marietta, GA" />
+    <meta property="twitter:description" content="Expert remodeling, flooring, painting, and construction services across Metro Atlanta and North Georgia. Request a free estimate!" />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1543286386-71314a40aac6?auto=format&fit=crop&q=80" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arxenconstruction.com/" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Arxen Construction",
+        "image": "https://i.postimg.cc/SNx9NN2x/Chat-GPT-Image-May-13-2025-12-34-23-PM-removebg-preview.png",
+        "@id": "https://arxenconstruction.com/#company",
+        "url": "https://arxenconstruction.com/",
+        "telephone": "+1-404-934-9458",
+        "priceRange": "$$$",
+        "description": "Expert residential and commercial construction and remodeling services in the greater Atlanta area. Specializing in kitchen & bathroom remodeling, flooring, painting, and custom construction projects.",
+        "slogan": "Quality construction for every project, big or small",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Marietta Square",
+          "addressLocality": "Marietta",
+          "addressRegion": "GA",
+          "postalCode": "30060",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 33.9526,
+          "longitude": -84.5499
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.9526,
+            "longitude": -84.5499
+          },
+          "geoRadius": "90"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Construction Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Kitchen Remodeling",
+                "url": "https://arxenconstruction.com/services/kitchen-remodeling"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Bathroom Remodeling",
+                "url": "https://arxenconstruction.com/services/bathroom-remodeling"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Flooring Installation",
+                "url": "https://arxenconstruction.com/services/hardwood"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Commercial Construction",
+                "url": "https://arxenconstruction.com/commercial"
+              }
+            }
+          ]
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/ArxenConstruction",
+          "https://www.instagram.com/ArxenConstruction"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Initial page loader, shown before JS loads -->
+    <div id="root-loading-indicator">
+      <img src="https://i.postimg.cc/SNx9NN2x/Chat-GPT-Image-May-13-2025-12-34-23-PM-removebg-preview.png" alt="Arxen Construction" width="120" height="60" style="margin-bottom: 20px;">
+      <div class="spinner"></div>
+      <div class="loading-progress">
+        <div class="loading-bar"></div>
+      </div>
+      <div style="margin-top: 16px; font-size: 14px; color: #666;">
+        Loading your experience...
+      </div>
+    </div>
+
+    <div id="root"></div>
+    
+    <script>
+      // Hide the initial loading indicator once the app has loaded
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var initialLoader = document.getElementById('root-loading-indicator');
+          if (initialLoader) {
+            initialLoader.style.opacity = '0';
+            setTimeout(function() {
+              initialLoader.style.display = 'none';
+            }, 300);
+          }
+        }, 500); // Small delay to ensure React has rendered
+      });
+    </script>
+    <!-- Service worker registration for offline capabilities -->
+    <script src="/sw-register.js" defer></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
